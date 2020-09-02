@@ -18,6 +18,7 @@ FastLED_TFTWrapper_GFX::FastLED_TFTWrapper_GFX(CRGB *__fb, const uint16_t fbw, c
 // WARNING, this is very slow an inefficient. It is only there for testing
 // but works at 5fs at 160x128 resolution.
 void FastLED_TFTWrapper_GFX::show() {
+    Framebuffer_GFX::showfps();
     //Serial.print(millis());
     for (uint16_t tftline = 0; tftline < _tfth; tftline++) {
 	for (uint16_t i = 0; i < _tftw; i++) {
